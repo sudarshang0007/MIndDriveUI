@@ -1,41 +1,175 @@
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-lg-3">
     <div class="card">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
+        <img src="./assets/images/car/carrun.{{currentData?.rpm > 0 ? 'gif' : 'jpg'}}" alt="" style="margin-bottom:40px;">
       </div>
     </div>
   </div>
-  <div class="col-md-2">
+
+  <div class="col-md-3">
     <div class="card">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
+        <div class="overview-item overview-item--c2">
+          <div class="overview__inner">
+            <div class="overview-box clearfix">
+              <div class="icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <div class="text">
+                <h2>{{currentData?.speed}}
+                  <span>km/hr</span>
+                </h2>
+                <span>Speed</span>
+              </div>
+            </div>
+            <!-- <div class="overview-chart">
+                <canvas id="widgetChart1"></canvas>
+              </div> -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
     <div class="card">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
+        <div class="overview-item overview-item--c1">
+          <div class="overview__inner">
+            <div class="overview-box clearfix">
+              <div class="icon">
+                <i class="fas fa-cog" style="font-size: 43px;"></i>
+              </div>
+              <div class="text">
+                <h2>{{currentData?.rpm}}
+                  <span>Rev/Min</span>
+                </h2>
+                <span>RPM</span>
+              </div>
+            </div>
+            <!--   <div class="overview-chart">
+                <canvas id="widgetChart2"></canvas>
+              </div> -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="overview-item overview-item--c3">
+            <div class="overview__inner">
+              <div class="overview-box clearfix">
+                <div class="icon">
+                  <i class="fas fa-address-card"></i>
+                </div>
+                <div class="text">
+                  <h2>{{currentData?.fuleRemaining | number:'2.1-2'}}
+                    <span>%</span>
+                  </h2>
+                  <span>Fuel Guage</span>
+                </div>
+              </div>
+              <!-- <div class="overview-chart">
+                <canvas id="widgetChart1"></canvas>
+              </div> -->
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+
+
+  <!-- <div class="col-lg-6">
+    <img src="./assets/images/car/carrun.jpg" alt="">
+  </div> -->
+</div>
+<div class="row">
+
+  
+  <div class="col-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="overview-item overview-item--c2">
+            <div class="overview__inner">
+              <div class="overview-box clearfix">
+                <div class="icon">
+                  <i class="zmdi zmdi-shopping-cart"></i>
+                </div>
+                <div class="text">
+                  <h2>{{currentData?.engLoad}}</h2>
+                  <span>Engine Load</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-3">
     <div class="card">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
+        <div class="overview-item overview-item--c1">
+          <div class="overview__inner">
+            <div class="overview-box clearfix">
+              <div class="icon">
+                <i class="fas fa-thermometer"></i>
+              </div>
+              <div class="text">
+                <h2>{{currentData?.engCoolantTmp}}
+                  <span>C</span>
+                </h2>
+                <span>Coolent Temp</span>
+              </div>
+            </div>
+            <!-- <div class="overview-chart">
+                  <canvas id="widgetChart1"></canvas>
+                </div> -->
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-lg-3">
     <div class="card">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
+        <div class="overview-item overview-item--c3">
+          <div class="overview__inner">
+            <div class="overview-box clearfix">
+              <div class="icon">
+                <i class="zmdi zmdi-shopping-cart"></i>
+              </div>
+              <div class="text">
+                <h2>388,688</h2>
+                <span>items solid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="overview-item overview-item--c4">
+          <div class="overview__inner">
+            <div class="overview-box clearfix">
+              <div class="icon">
+                <i class="zmdi zmdi-shopping-cart"></i>
+              </div>
+              <div class="text">
+                <h2>{{currentData?.tripDistance | number:'2.1-2'}}</h2>
+                <span>Trip Distance</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -50,13 +184,12 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-6">
-    <div class="card">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
+  <div class="col-md-6">
+    <!-- Google map Begin -->
+    <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.1850740970895!2d75.02559821440798!3d17.87679759321151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc4745715555555%3A0x1f3bb9b1b1b72ecb!2sShikshan+Prasarak+Mandal%E2%80%99s+College+of+Pharmacy!5e0!3m2!1sen!2sin!4v1472680781658"
+      width="100%" height="auto" frameborder="0" style="border:0;min-height:210px" allowfullscreen=""></iframe> -->
+    <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q={{currentData?.gpsLatitude}},{{currentData?.gpsLongitude}}&hl=es;z=30&amp;output=embed">
+    </iframe>
   </div>
 </div>
 <div class="row">

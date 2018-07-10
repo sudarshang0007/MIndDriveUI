@@ -17,6 +17,6 @@ export class HttpService {
   }
 
   public post(): Observable<any> {
-    return this.http.post('http://pl1inpun0428pc:5000/api/vehicle', {});
+    return this.http.post('/api/vehicle', {});
   }
 }

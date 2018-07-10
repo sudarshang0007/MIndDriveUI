@@ -19,4 +19,9 @@ export class HttpService {
   public post(): Observable<any> {
     return this.http.post('/api/vehicle', {});
   }
+ 
+  public getRegistrationIds(): Observable<any>{
+    return this.http.get('https://minddrive.cfapps.io/api/getMindDrive/registrationId');
+  }
+
 }

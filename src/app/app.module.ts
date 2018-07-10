@@ -13,6 +13,9 @@ import { LiveComponent } from './live/live/live.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './services/http.service';
 import { CurrentComponent } from './live/live/current/current.component';
+import { VehicleProfileComponent } from './vehicle-profile/vehicle-profile.component';
+import { FormsModule } from '@angular/forms';
+
 import { TripComponent } from './live/live/triplist/trip.component';
 
 @NgModule({
@@ -23,13 +26,15 @@ import { TripComponent } from './live/live/triplist/trip.component';
     AnalysisComponent,
     LiveComponent,
     CurrentComponent,
+    VehicleProfileComponent,
     TripComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     RoutingmoduleModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [HttpService],

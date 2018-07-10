@@ -13,6 +13,9 @@ import { LiveComponent } from './live/live/live.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './services/http.service';
 import { CurrentComponent } from './live/live/current/current.component';
+import { VehicleProfileComponent } from './vehicle-profile/vehicle-profile.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,13 +24,15 @@ import { CurrentComponent } from './live/live/current/current.component';
     HeaderComponent,
     AnalysisComponent,
     LiveComponent,
-    CurrentComponent
+    CurrentComponent,
+    VehicleProfileComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     RoutingmoduleModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [HttpService],

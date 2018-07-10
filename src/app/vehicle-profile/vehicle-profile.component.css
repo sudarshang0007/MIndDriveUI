@@ -1,0 +1,8 @@
+svg[Attributes] {
+    width: 19%;
+    height: 200;
+}
+user agent stylesheet
+svg:not(:root), symbol, image, marker, pattern, foreignObject {
+    overflow: hidden;
+}

@@ -1,0 +1,99 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="overview-wrap">
+      <h2 class="title-1">Vehicle Profile</h2>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div>
+    <span id="speedometer"></span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Company</strong>
+      </div>
+
+
+      <div class="card-body card-block">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="form-group">
+              <select  (change)="onSelect()" [(ngModel)]="selected" >
+                <option *ngFor="let registrationId of registrationIds" [ngValue]="registrationId">
+                  {{registrationId}}
+                </option>
+              </select>
+              <br/>
+              Selected Country ID: {{selected}}
+            </div>
+            <div class="form-group">
+              <label for="vat" class=" form-control-label">Owner</label>
+              <li>{{vehicleprofile.owner}}</li>
+            </div>
+            <div class="form-group">
+                <label for="vat" class=" form-control-label">contactNo</label>
+                <li>{{vehicleprofile.contactNo}}</li>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="form-group">
+                <label for="vat" class=" form-control-label">model</label>
+                <li>{{vehicleprofile.model}}</li>
+            </div>
+            <div class="form-group">
+                <label for="vat" class=" form-control-label">make</label>
+                <li>{{vehicleprofile.make}}</li>
+            </div>
+            <div class="form-group">
+                <label for="vat" class=" form-control-label">year</label>
+                <li>{{vehicleprofile.year}}</li>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="row form-group">
+              <div class="col-8">
+                <div class="form-group">
+                    <label for="vat" class=" form-control-label">noOfOwner</label>
+                    <li>{{vehicleprofile.noOfOwner}}</li>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="form-group">
+                    <label for="vat" class=" form-control-label">fuelType</label>
+                    <li>{{vehicleprofile.fuelType}}</li>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="form-group">
+                    <label for="vat" class=" form-control-label">isAccidental</label>
+                    <li>{{vehicleprofile.isAccidental}}</li>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3">
+            <div class="form-group">
+                <label for="vat" class=" form-control-label">isFloodAffected</label>
+                <li>{{vehicleprofile.isFloodAffected}}</li>
+            </div>
+            <div class="form-group">
+                <label for="vat" class=" form-control-label">pid</label>
+                <li>{{vehicleprofile.pid}}</li>
+            </div>
+            <div class="form-group">
+                <label for="vat" class=" form-control-label">Owner</label>
+                <li>{{vehicleprofile.owner}}</li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

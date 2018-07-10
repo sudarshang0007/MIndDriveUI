@@ -15,7 +15,7 @@ export class LiveComponent implements OnInit {
 
   ngOnInit() {
     //this.http.get().subscribe();
-    this.http.post().subscribe();
+    //this.http.post().subscribe();
   }
 
 

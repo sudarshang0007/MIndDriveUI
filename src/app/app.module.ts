@@ -13,6 +13,7 @@ import { LiveComponent } from './live/live/live.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './services/http.service';
 import { CurrentComponent } from './live/live/current/current.component';
+import { TripComponent } from './live/live/triplist/trip.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CurrentComponent } from './live/live/current/current.component';
     HeaderComponent,
     AnalysisComponent,
     LiveComponent,
-    CurrentComponent
+    CurrentComponent,
+    TripComponent
   ],
   imports: [
     BrowserModule,

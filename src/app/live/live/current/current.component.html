@@ -17,8 +17,8 @@
                 <i class="fas fa-tachometer-alt"></i>
               </div>
               <div class="text">
-                <h2>{{currentData?.speed}}
-                  <span>km/hr</span>
+                <h2>{{currentData?.speed | number:'2.0-1' }}
+                  <span>Mi/hr</span>
                 </h2>
                 <span>Speed</span>
               </div>
@@ -65,7 +65,7 @@
                 <i class="fas fa-address-card"></i>
               </div>
               <div class="text">
-                <h2>{{currentData?.fuleRemaining | number:'2.1-2'}}
+                <h2>{{currentData?.fuleRemaining | number:'2.0-1'}}
                   <span>%</span>
                 </h2>
                 <span>Fuel Guage</span>
@@ -100,7 +100,7 @@
                 <i class="zmdi zmdi-shopping-cart"></i>
               </div>
               <div class="text">
-                <h2>{{currentData?.engLoad}}</h2>
+                <h2>{{currentData?.engLoad | number:'2.0-1'}}</h2>
                 <span>Engine Load</span>
               </div>
             </div>
@@ -144,7 +144,7 @@
                 <i class="zmdi zmdi-shopping-cart"></i>
               </div>
               <div class="text">
-                <h2>{{currentData?.airFuelRatio | number:'2.1-2'}}</h2>
+                <h2>{{currentData?.airFuelRatio ? currentData?.airFuelRatio : '0' | number:'2.0-1'}}</h2>
                 <span>Fuel Air Ratio</span>
               </div>
             </div>
@@ -164,7 +164,7 @@
                 <i class="zmdi zmdi-shopping-cart"></i>
               </div>
               <div class="text">
-                <h2>{{currentData?.tripDistance | number:'2.1-2'}}</h2>
+                <h2>{{currentData?.tripDistance | number:'2.0-1'}}</h2>
                 <span>Trip Distance</span>
               </div>
             </div>
@@ -175,7 +175,7 @@
   </div>
 </div>
 
-<!-- <div class="row">
+<div class="row">
   <div class="col-lg-6">
     <div class="card">
       <div class="card-body">
@@ -184,15 +184,10 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6">
-    {{'https://maps.google.com/maps?q='+currentData?.gpsLatitude+','+currentData?.gpsLongitude+'&hl=es;z=30&amp;output=embed'}}
-    <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{'https://maps.google.com/maps?q='+currentData?.gpsLatitude+','+currentData?.gpsLongitude+'&hl=es;z=30&amp;output=embed'}}">
-    </iframe>
-  </div>
 </div>
 <div class="row">
 
 </div>
 <div class="row">
 
-</div> -->
+</div>

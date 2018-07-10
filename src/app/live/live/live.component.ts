@@ -14,8 +14,9 @@ export class LiveComponent implements OnInit {
   }
 
   ngOnInit() {
-    //this.http.get().subscribe();
-    this.http.post().subscribe();
+
+    const doc = document.getElementById('home-tab');
+    doc.click();
   }
 
 

@@ -1,3 +1,6 @@
+
+
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +10,9 @@ import { SideMenuComponent } from './menu/side-menu.component';
 import { HeaderComponent } from './header/header.component';
 import { AnalysisComponent } from './analysis/analysis.component';
 import { LiveComponent } from './live/live/live.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './services/http.service';
+import { CurrentComponent } from './live/live/current/current.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +20,17 @@ import { LiveComponent } from './live/live/live.component';
     SideMenuComponent,
     HeaderComponent,
     AnalysisComponent,
-    LiveComponent
+    LiveComponent,
+    CurrentComponent
   ],
   imports: [
     BrowserModule,
-    RoutingmoduleModule
+    RouterModule,
+    RoutingmoduleModule,
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

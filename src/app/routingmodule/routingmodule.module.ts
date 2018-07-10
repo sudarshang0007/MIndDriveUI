@@ -5,8 +5,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: AnalysisComponent },
-  { path: 'Live', component: LiveComponent }
+  { path: 'home', component: AnalysisComponent },
+  { path: 'live', component: LiveComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

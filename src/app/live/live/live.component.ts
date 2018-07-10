@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-live',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LiveComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpService) {
+
+  }
 
   ngOnInit() {
+    //this.http.get().subscribe();
+    this.http.post().subscribe();
   }
+
+
+
 
 }

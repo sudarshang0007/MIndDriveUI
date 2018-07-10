@@ -16,8 +16,8 @@ export class CurrentComponent implements OnInit, OnDestroy {
 
   constructor(private http: HttpService) {
     this.host = SERVICE_HOST;
-    this.intervalManager = setInterval(() => { this.fetchVehicleLiveData(); }, 1000);
-    //this.fetchVehicleLiveData();
+    // this.intervalManager = setInterval(() => { this.fetchVehicleLiveData(); }, 1000);
+    this.fetchVehicleLiveData();
 
     const head = document.getElementById('head');
     const script = document.createElement('script');

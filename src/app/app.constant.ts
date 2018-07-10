@@ -1,1 +1,1 @@
-export const SERVICE_HOST = 'https://minddrive.cfapps.io/';
+export const SERVICE_HOST = 'https://minddrive.cfapps.io';

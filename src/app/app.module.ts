@@ -16,6 +16,7 @@ import { CurrentComponent } from './live/live/current/current.component';
 import { VehicleProfileComponent } from './vehicle-profile/vehicle-profile.component';
 import { FormsModule } from '@angular/forms';
 
+import { TripComponent } from './live/live/triplist/trip.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     AnalysisComponent,
     LiveComponent,
     CurrentComponent,
-    VehicleProfileComponent
+    VehicleProfileComponent,
+    TripComponent
   ],
   imports: [
     BrowserModule,

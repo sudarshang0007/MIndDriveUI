@@ -1,8 +1,11 @@
+<div class="card">
+  <span class="btn btn-info m-l-10 m-b-10">{{currentData?.time | date:'mediumTime'}}</span>
+</div>
 <div class="row">
   <div class="col-lg-3">
     <div class="card">
       <div class="card-body">
-        <img src="./assets/images/car/carrun.{{currentData?.rpm > 0 ? 'gif' : 'jpg'}}" alt="" >
+        <img src="./assets/images/car/carrun.{{currentData?.rpm > 0 ? 'gif' : 'jpg'}}" alt="">
       </div>
     </div>
   </div>
@@ -62,7 +65,7 @@
           <div class="overview__inner">
             <div class="overview-box clearfix">
               <div class="icon">
-                <i class="fas fa-address-card"></i>
+                <i class="fas fa-gas-pump"></i>
               </div>
               <div class="text">
                 <h2>{{currentData?.fuleRemaining | number:'2.0-1'}}
@@ -97,7 +100,7 @@
           <div class="overview__inner">
             <div class="overview-box clearfix">
               <div class="icon">
-                <i class="zmdi zmdi-shopping-cart"></i>
+                <i class="fas fa-cogs"></i>
               </div>
               <div class="text">
                 <h2>{{currentData?.engLoad | number:'2.0-1'}}</h2>
@@ -141,7 +144,7 @@
           <div class="overview__inner">
             <div class="overview-box clearfix">
               <div class="icon">
-                <i class="zmdi zmdi-shopping-cart"></i>
+                <i class="fas fa-fire"></i>
               </div>
               <div class="text">
                 <h2>{{currentData?.airFuelRatio ? currentData?.airFuelRatio : '0' | number:'2.0-1'}}</h2>
@@ -161,7 +164,7 @@
           <div class="overview__inner">
             <div class="overview-box clearfix">
               <div class="icon">
-                <i class="zmdi zmdi-shopping-cart"></i>
+                <i class="fas fa-road"></i>
               </div>
               <div class="text">
                 <h2>{{currentData?.tripDistance | number:'2.0-1'}}</h2>
@@ -175,7 +178,7 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-lg-6">
     <div class="card">
       <div class="card-body">
@@ -184,7 +187,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="row">
 
 </div>

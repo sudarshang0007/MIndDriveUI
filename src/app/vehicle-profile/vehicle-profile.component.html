@@ -24,72 +24,67 @@
         <div class="row">
           <div class="col-lg-3">
             <div class="form-group">
-              <select  (change)="onSelect()" [(ngModel)]="selected" >
+              <select (change)="onSelect()" [(ngModel)]="selected" class="form-control">
                 <option *ngFor="let registrationId of registrationIds" [ngValue]="registrationId">
-                  {{registrationId}}
+                  <small> {{registrationId}} </small>
                 </option>
               </select>
               <br/>
-              Selected Country ID: {{selected}}
-            </div>
-            <div class="form-group">
-              <label for="vat" class=" form-control-label">Owner</label>
-              <li>{{vehicleprofile?.owner}}</li>
-            </div>
-            <div class="form-group">
-                <label for="vat" class=" form-control-label">contactNo</label>
-                <li>{{vehicleprofile?.contactNo}}</li>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="form-group">
-                <label for="vat" class=" form-control-label">model</label>
-                <li>{{vehicleprofile?.model}}</li>
-            </div>
-            <div class="form-group">
-                <label for="vat" class=" form-control-label">make</label>
-                <li>{{vehicleprofile?.make}}</li>
-            </div>
-            <div class="form-group">
-                <label for="vat" class=" form-control-label">year</label>
-                <li>{{vehicleprofile?.year}}</li>
+              <label for="vat" class=" form-control-label">Owner :
+                <small> {{vehicleprofile?.owner}} </small>
+              </label>
+              <br/>
+              <label for="vat" class=" form-control-label">Contact:
+                <small> {{vehicleprofile?.contactNo}} </small>
+              </label>
+
+
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="row form-group">
-              <div class="col-8">
-                <div class="form-group">
-                    <label for="vat" class=" form-control-label">noOfOwner</label>
-                    <li>{{vehicleprofile?.noOfOwner}}</li>
-                </div>
-              </div>
-              <div class="col-8">
-                <div class="form-group">
-                    <label for="vat" class=" form-control-label">fuelType</label>
-                    <li>{{vehicleprofile?.fuelType}}</li>
-                </div>
-              </div>
-              <div class="col-8">
-                <div class="form-group">
-                    <label for="vat" class=" form-control-label">isAccidental</label>
-                    <li>{{vehicleprofile?.isAccidental}}</li>
-                </div>
-              </div>
+            <div class="form-group">
+              <label for="vat" class=" form-control-label">Make:
+                <small> {{vehicleprofile?.make}} </small>
+              </label>
+              <br/>
+              <label for="vat" class=" form-control-label">Model :
+                <small> {{vehicleprofile?.model}} </small>
+              </label>
+              <br/>
+              <label for="vat" class=" form-control-label">year :
+                <small> {{vehicleprofile?.year}} </small>
+              </label>
+              <br/>
+              <label for="vat" class=" form-control-label">Fuel Type :
+                <small> {{vehicleprofile?.fuelType}} </small>
+              </label>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class=" form-group">
+              <label for="vat" class=" form-control-label">is Flood Affected :
+                <small> {{vehicleprofile?.isFloodAffected}} </small>
+              </label>
+              <br/>
+              <label for="vat" class=" form-control-label">Is Accidental:
+                <small> {{vehicleprofile?.isAccidental}} </small>
+              </label>
+              <br/>
+              <label for="vat" class=" form-control-label">No. of Owner:
+                <small> {{vehicleprofile?.noOfOwner}} </small>
+              </label>
             </div>
 
           </div>
           <div class="col-lg-3">
             <div class="form-group">
-                <label for="vat" class=" form-control-label">isFloodAffected</label>
-                <li>{{vehicleprofile?.isFloodAffected}}</li>
-            </div>
-            <div class="form-group">
-                <label for="vat" class=" form-control-label">pid</label>
-                <li>{{vehicleprofile?.pid}}</li>
-            </div>
-            <div class="form-group">
-                <label for="vat" class=" form-control-label">Owner</label>
-                <li>{{vehicleprofile?.owner}}</li>
+              <label for="vat" class=" form-control-label">Average</label>
+              <ul>
+                <li>Engine Temperature :
+                  <small> {{average?.avgEnginetemp | number:'1.1-2'}} </small> C</li>
+                <li>Vehicle Speed :
+                  <small> {{average?.avgSpeed | number:'1.1-2'}} </small> Km/Hr</li>
+              </ul>
             </div>
           </div>
         </div>

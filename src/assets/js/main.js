@@ -262,10 +262,10 @@
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', ''],
+          labels: ['November', 'December', 'January', 'February', 'March', 'April', 'May', 'June', 'July', ''],
           datasets: [
             {
-              label: 'My First dataset',
+              label: 'Bus Trips',
               backgroundColor: brandService,
               borderColor: 'transparent',
               pointHoverBackgroundColor: '#fff',
@@ -274,7 +274,7 @@
 
             },
             {
-              label: 'My Second dataset',
+              label: 'Cab Trips',
               backgroundColor: brandProduct,
               borderColor: 'transparent',
               pointHoverBackgroundColor: '#fff',
@@ -341,30 +341,27 @@
           datasets: [
             {
               label: "My First dataset",
-              data: [60, 20, 20],
+              data: [60, 40],
               backgroundColor: [
                 '#00b5e9',
                 '#fa4251'
               ],
               hoverBackgroundColor: [
                 '#00b5e9',
-                '#fa4251',
-                "#f9f9f9"
+                '#fa4251'
               ],
               borderWidth: [
                 0, 0
               ],
               hoverBorderColor: [
                 'transparent',
-                'transparent',
                 'transparent'
               ]
             }
           ],
           labels: [
-            'Products',
-            'Services',
-            'Services1'
+            'Buses',
+            'Cabs'
           ]
         },
         options: {

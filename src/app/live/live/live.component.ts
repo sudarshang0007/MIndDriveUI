@@ -14,9 +14,6 @@ export class LiveComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    const doc = document.getElementById('home-tab');
-    doc.click();
   }
 
 

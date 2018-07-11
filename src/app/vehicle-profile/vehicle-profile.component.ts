@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
 import { VehicleProfile } from './vehicle-profile';
 // import { HttpService } from '../services/http.service';
 import { HttpClient } from '@angular/common/http';
@@ -12,46 +11,54 @@ import { HttpClient } from '@angular/common/http';
 export class VehicleProfileComponent implements OnInit {
 
   selected: string;
+  average: number;
   registrationIds: string[] = [];
-  vehicleprofile:VehicleProfile;
-  //selectedVehicleProfile: VehicleProfile =new VehicleProfile("761eb5e07a530cf93d5b9ef4ab391eb6","Smith","2314567892","Jazz","Honda","2016","2","Petrol","NO","NO","MH14EY1438");
+  vehicleprofile: VehicleProfile;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    //this.registrationIds=<any>this.getData();
     this.getData();
   }
 
   getData(): any {
-    this.http.get<string[]>("https://minddrive.cfapps.io/api/getMindDrive/registrationId").subscribe(
-
+    this.http.get<string[]>('https://minddrive.cfapps.io/api/getMindDrive/registrationId').subscribe(
       response => {
-        console.log(response);
-
         this.registrationIds = response;
-
         console.log(this.registrationIds);
       },
       error => {
-        console.log("error " + error);
+        console.log('error ' + error);
       }
-    )
+    );
   }
-  getVehicleProfile(): any{
-    this.http.get<VehicleProfile>("https://minddrive.cfapps.io/api/getMindDrive/details/"+this.selected).subscribe(
 
+
+  getVehicleProfile(): any {
+    this.http.get<VehicleProfile>('https://minddrive.cfapps.io/api/getMindDrive/details/' + this.selected).subscribe(
       response => {
-        console.log(response);
-
         this.vehicleprofile = response;
-
-        console.log(this.vehicleprofile);
+        this.getAvgOfVehicle();
       },
       error => {
-        console.log("error " + error);
+        console.log('error ' + error);
       }
-    )
+    );
+
   }
+
+
+  getAvgOfVehicle(): any {
+    this.http.get<any>('https://minddrive.cfapps.io//api/getMindDrive/avgData/' + this.vehicleprofile.pid).subscribe(
+      response => {
+        console.log(response);
+        this.average = response;
+      },
+      error => {
+        console.log('error ' + error);
+      }
+    );
+  }
+
   onSelect() {
     this.getVehicleProfile();
   }

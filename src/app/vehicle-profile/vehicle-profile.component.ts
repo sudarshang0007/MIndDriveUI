@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class VehicleProfileComponent implements OnInit {
 
   selected: string;
-  average: number;
+  average: any;
   registrationIds: string[] = [];
   vehicleprofile: VehicleProfile;
   constructor(private http: HttpClient) { }
@@ -48,7 +48,7 @@ export class VehicleProfileComponent implements OnInit {
 
 
   getAvgOfVehicle(): any {
-    this.http.get<any>('https://minddrive.cfapps.io//api/getMindDrive/avgData/' + this.vehicleprofile.pid).subscribe(
+    this.http.get('https://minddrive.cfapps.io//api/getMindDrive/avgData/' + this.vehicleprofile.pid).subscribe(
       response => {
         console.log(response);
         this.average = response;
